@@ -1,7 +1,10 @@
+import { InputHTMLAttributes } from 'react';
 import iconImage from '../assets/icon-list.svg'
 import desktopImage from '../assets/illustration-sign-up-desktop.svg'
 
-function NewsletterForm() {
+type NewsletterFormProp = Pick<InputHTMLAttributes<HTMLButtonElement>, 'onClick'>;
+
+function NewsletterForm(prop: NewsletterFormProp) {
     const listInfos = [
         "Product discovery and building what matters",
         "Measuring to ensore updates are a success",
@@ -27,7 +30,7 @@ function NewsletterForm() {
                 <input className="pl-4 w-96 h-14 mb-6" type="text" placeholder='email@company.com'/>
                 <button 
                     className='w-96 h-14 bg-[#242742] text-white text-base font-bold rounded-xl hover:bg-[#FF6A3A]'
-                    onClick={() => console.log("A")}
+                    {...prop}
                 >
                     Subscribe to monthly newsletter
                 </button>
