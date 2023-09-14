@@ -11,7 +11,7 @@ function App() {
 
   return (
     <div className="bg-[#36384d] w-full h-full absolute top-0 left-0 flex justify-center items-center">
-      {newsletterSubmit ? <NewsletterModal /> : <NewsletterForm onClick={() => onSubmitForm()}/>}
+      {newsletterSubmit ? <NewsletterModal /> : <NewsletterForm onSubmit={() => onSubmitForm()}/>}
     </div>
   );
 }
